@@ -3,7 +3,7 @@ Enjoy Shopping, Without Worrying...😉
 <br><br>
 Android Application
 
-Author: <a href="nkedin.com/in/dinukanavaratna/">Dinuka Navaratna</a>
+Author: <a href="https://www.linkedin.com/in/dinukanavaratna/" target="_blank">Dinuka Navaratna</a>
 
 Devpost: https://devpost.com/software/pick-my-pack
 <br><br><br>
