@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "298816862290",
+    "firebase_url": "https://pickmypack.firebaseio.com",
+    "project_id": "pickmypack",
+    "storage_bucket": "pickmypack.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:298816862290:android:3703289ac9f1358caa878b",
+        "android_client_info": {
+          "package_name": "com.dinukanavaratna.pickmypack"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "298816862290-mjhmnb43ii08ovp5gff7af97d5rpf693.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dinukanavaratna.pickmypack",
+            "certificate_hash": "c1c26e92db17e232978cc5087a36f7f60d0155b1"
+          }
+        },
+        {
+          "client_id": "298816862290-u5g01l9938hpeegtf18in86ej6cbjdm8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByxQ0TQTHtPMjdeDHYgpOJwZkutWReSTc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "298816862290-u5g01l9938hpeegtf18in86ej6cbjdm8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
