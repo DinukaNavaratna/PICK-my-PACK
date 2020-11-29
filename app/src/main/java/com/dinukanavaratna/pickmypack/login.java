@@ -15,11 +15,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.dinukanavaratna.pickmypack.dataStoring.localDB;
 
 import java.io.File;
+import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
@@ -36,6 +38,15 @@ public class login extends AppCompatActivity {
         final EditText psw = (EditText) findViewById(R.id.psw);
         final Button login = (Button) findViewById(R.id.login);
         loading = (ProgressBar) findViewById(R.id.loading);
+        TextView textView5 = findViewById(R.id.textView5);
+
+        textView5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://pickmypack.co/"));
+                startActivity(browserIntent);
+            }
+        });
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,17 +86,18 @@ public class login extends AppCompatActivity {
     // ---------------------- Encryption --------------------------
     public String md5(String s) {
         try {
-            // Create MD5 Hash
-            MessageDigest digest = java.security.MessageDigest.getInstance("MD5");
-            digest.update(s.getBytes());
-            byte[] messageDigest = digest.digest();
-
-            // Create Hex String
-            StringBuffer hexString = new StringBuffer();
-            for (int i = 0; i < messageDigest.length; i++)
-                hexString.append(Integer.toHexString(0xFF & messageDigest[i]));
-
-            return hexString.toString();
+            String result = s;
+            if(s != null) {
+                MessageDigest md = MessageDigest.getInstance("MD5"); //or "SHA-1"
+                md.update(s.getBytes());
+                BigInteger hash = new BigInteger(1, md.digest());
+                result = hash.toString(16);
+                while(result.length() < 32) { //40 for SHA-1
+                    result = "0" + result;
+                }
+            }
+            Log.i("Pass", result);
+            return result;
         } catch (NoSuchAlgorithmException e) {
             e.printStackTrace();
         }

@@ -125,7 +125,7 @@ public class shopping_groups_adapter extends RecyclerView.Adapter<shopping_group
                             builder.setPositiveButton("Submit", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
-                                    String qry = "UPDATE shopping_group SET topic="+topic.getText().toString()+" , description='"+description.getText().toString()+"' WHERE id="+group.getId()+";";
+                                    String qry = "UPDATE shopping_group SET topic='"+topic.getText().toString()+"', description='"+description.getText().toString()+"' WHERE id="+group.getId()+";";
                                     List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
                                     nameValuePairs.add(new BasicNameValuePair("querytoDB", qry));
                                     insertData data = new insertData(nameValuePairs);

@@ -222,7 +222,7 @@ public class shopping_list extends AppCompatActivity implements OnMapReadyCallba
                                 final Cursor resultSet = database.rawQuery("Select id from shopping_group WHERE topic='"+group_list_add1+"';", null); //Select * from requests WHERE donation_count<3 ORDER BY id;
                                 if(resultSet.getCount() == 1) {
                                     resultSet.moveToFirst();
-                                    String qry = "INSERT INTO shopping_pins (group_id, description, payment, lat, lng) VALUES ("+resultSet.getInt(0)+", '" + group_list_add1 + "', '" + description_add1 + "', '" + payments_add1 + "', '', " + lat + ", " + lng + ");";
+                                    String qry = "INSERT INTO shopping_pins (group_id, description, payment, lat, lng) VALUES ("+resultSet.getInt(0)+", '" + description_add1 + "', '" + payments_add1 + "', " + lat + ", " + lng + ");";
                                     List<NameValuePair> nameValuePairs = new ArrayList<NameValuePair>();
                                     nameValuePairs.add(new BasicNameValuePair("querytoDB", qry));
                                     insertData data = new insertData(nameValuePairs);

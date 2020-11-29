@@ -13,6 +13,10 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
+    <meta-data
+        android:name="author"
+        android:value="Dinuka Navaratna" />
+
     <application
         android:name=".appBase"
         android:allowBackup="true"
